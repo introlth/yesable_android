@@ -4,65 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".Find_Id_Activity">
 
-    <!-- 뒤로가기 버튼과 아이디 찾기 타이틀 -->
-    <TextView
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="〈"
-        android:textSize="24sp"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!-- 탭 버튼들 -->
-    <TextView
-        android:id="@+id/title_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="아이디 찾기"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/back_button"
-        app:layout_constraintStart_toEndOf="@id/back_button"
-        app:layout_constraintTop_toTopOf="@id/back_button"
-        app:layout_constraintVertical_bias="1.0" />
+        <TextView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:text="〈       아이디 찾기"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
-        android:id="@+id/tab_buttons"
+
+    <FragmentContainerView
+        android:id="@+id/tab_buttons_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/back_button"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:name="com.example.yesable.Tab_Buttons_Fragment1"/>
 
-        <Button
-            android:id="@+id/general_member_tab"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
 
-            android:text="일반회원"
-            android:textStyle="bold"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/company_member_tab"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:text="기업회원"
-            android:textSize="16sp" />
-    </LinearLayout>
 
     <!-- 휴대전화 번호 라벨 -->
     <TextView
@@ -75,7 +51,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tab_buttons" />
+        app:layout_constraintTop_toBottomOf="@+id/tab_buttons_fragment_container" />
 
     <!-- 휴대전화 번호 입력 및 인증 -->
     <LinearLayout
@@ -163,17 +139,17 @@
     <!-- 아이디 찾기 버튼 -->
     <Button
         android:id="@+id/find_id_button"
-        android:layout_width="match_parent"
+        style="@style/ButtonStyleColor"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
-        android:background="@drawable/rounded_button"
-        android:padding="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="28dp"
         android:text="아이디 찾기"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/verification_error_message" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

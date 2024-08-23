@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/general_member_tab"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="일반회원"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"/>
+
+    <Button
+        android:id="@+id/company_member_tab"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="기업회원"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"/>
+
+    <Button
+        android:id="@+id/business_number_tab"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="사업자번호로찾기"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"/>
+
+    <Button
+        android:id="@+id/phone_number_tab"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="휴대전화로찾기"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"/>
+</LinearLayout>
